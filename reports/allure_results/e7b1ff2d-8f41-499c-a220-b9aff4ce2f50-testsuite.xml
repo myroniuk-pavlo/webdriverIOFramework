@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1573936735118' stop='1573936738600'>
+    <name>Test whether specific elements are visible within viewport</name>
+    <title>Test whether specific elements are visible within viewport</title>
+    <test-cases>
+        <test-case start='1573936735119' status='passed' stop='1573936738337'>
+            <name>should resize the current viewport</name>
+            <title>should resize the current viewport</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-9'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome"}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/mnt/drive/Projects/webdriverioFramework/tests/viewportTest.js"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1573936738338' status='passed' stop='1573936738600'>
+            <name>should detect if an element is visible</name>
+            <title>should detect if an element is visible</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-9'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome"}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/mnt/drive/Projects/webdriverioFramework/tests/viewportTest.js"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1573936736087' stop='1573936738546'>
+    <name>Verify whether Webdriveruniversity page links work correctly</name>
+    <title>Verify whether Webdriveruniversity page links work correctly</title>
+    <test-cases>
+        <test-case start='1573936736294' status='broken' stop='1573936738543'>
+            <name>"after each" hook for "Check that the "Contact us" button opens the "Contact Us" page"</name>
+            <title>"after each" hook for "Check that the "Contact us" button opens the "Contact Us" page"</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-12'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"maxInstances":5,"browserName":"chrome"}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/mnt/drive/Projects/webdriverioFramework/tests/webdriverUniversityTest.js"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>chrome not reachable</message>
+                <stack-trace>Error: Request timed out after the element was still found on the page.
+                    at getTabIds() - close.js:13:21
+                    at close() - at windowHandles() - getTabIds.js:33:28</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
