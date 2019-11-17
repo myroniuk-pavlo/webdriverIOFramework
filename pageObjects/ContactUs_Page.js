@@ -1,5 +1,3 @@
-const expect = require('chai').expect;
-
 class ContactUs_Page {
     get firstName() { return $("[name='first_name']");}
     get lastName() { return $('//input[@name="last_name"]');}
@@ -8,6 +6,13 @@ class ContactUs_Page {
     get submitButton() { return $('//input[@type="submit"]');}
     get successfulSubmissionHeader() { return $('#contact_reply h1');}
     get unsuccessfulSubmissionHeader() { return $("body");}
+    get successfulSubmissionHeaderText() {
+        return this.successfulSubmissionHeader.getText();
+    }
+    get unsuccessfulSubmissionHeaderText() {
+        return this.unsuccessfulSubmissionHeader.getText();
+    }
+
 
     setFirstName(firstName) {
         return this.firstName.setValue(firstName);
@@ -29,7 +34,6 @@ class ContactUs_Page {
         return this.submitButton.click();
     }
 
-
     submitAllInformationViaContactUsForm(firstName, lastName, emailAddress, comments) {
         if (firstName) {
             this.firstName.setValue(firstName);
@@ -44,22 +48,6 @@ class ContactUs_Page {
             this.comments.setValue(comments);
         }
         this.submitButton.click();
-        this.confirmSuccessfulSubmission()
-    }
-
-    confirmSuccessfulSubmission() {
-        const successfulSubmissionHeader = '#contact_reply h1';
-        const validateSubmissionHeader = browser.waitUntil(function () {
-            return browser.getText(successfulSubmissionHeader) === 'Thank You for your Message!';
-        }, 3000);
-        expect(validateSubmissionHeader, 'Successful Submission Message does not exist!').to.be.true;
-    }
-
-    confirmUnsuccessfulSubmission() {
-        // let validateSubmissionHeader = browser.waitUntil(function () {
-        //   return browser.getText(locators.unsuccessfulSubmissionSelector) === 'Error: all fields are required';
-        // }, 3000);
-        expect(this.unsuccessfulSubmissionHeader.getText()).to.include('Error: all fields are required');
     }
 }
 
